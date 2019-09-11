@@ -23,7 +23,7 @@ libraryDependencies ++= Seq(
   "com.typesafe.slick"         %% "slick"                % "3.3.2",
   "com.typesafe.slick"         %% "slick-hikaricp"       % "3.3.2",
   "com.typesafe.play"          %% "play-json"            % "2.7.4",
-  "org.postgresql"             % "postgresql"            % "42.2.6",
+  "org.postgresql"             % "postgresql"            % "42.2.7",
   "com.chuusai"                %% "shapeless"            % "2.3.3",
   "io.underscore"              %% "slickless"            % "0.3.6",
   "org.scala-lang.modules"     %% "scala-java8-compat"   % "0.9.0",

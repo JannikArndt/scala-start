@@ -3,7 +3,7 @@ scalaVersion := "2.13.0"
 version := "1.0"
 
 val akkaVersion     = "2.5.25"
-val akkaHttpVersion = "10.1.9"
+val akkaHttpVersion = "10.1.10"
 
 libraryDependencies ++= Seq(
   "com.typesafe.akka"          %% "akka-actor"           % akkaVersion,
@@ -16,14 +16,14 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka"          %% "akka-http"            % akkaHttpVersion,
   "com.typesafe.akka"          %% "akka-testkit"         % akkaVersion % Test,
   "com.typesafe.akka"          %% "akka-http-testkit"    % akkaHttpVersion % Test,
-  "de.heikoseeberger"          %% "akka-http-json4s"     % "1.28.0",
+  "de.heikoseeberger"          %% "akka-http-json4s"     % "1.29.1",
   "org.json4s"                 %% "json4s-native"        % "3.6.7",
   "org.scalatest"              %% "scalatest"            % "3.0.8" % Test,
-  "org.mockito"                %% "mockito-scala"        % "1.5.14" % Test,
+  "org.mockito"                %% "mockito-scala"        % "1.5.18" % Test,
   "com.typesafe.slick"         %% "slick"                % "3.3.2",
   "com.typesafe.slick"         %% "slick-hikaricp"       % "3.3.2",
   "com.typesafe.play"          %% "play-json"            % "2.7.4",
-  "org.postgresql"             % "postgresql"            % "42.2.6",
+  "org.postgresql"             % "postgresql"            % "42.2.8",
   "com.chuusai"                %% "shapeless"            % "2.3.3",
   "io.underscore"              %% "slickless"            % "0.3.6",
   "org.scala-lang.modules"     %% "scala-java8-compat"   % "0.9.0",

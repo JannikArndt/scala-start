@@ -1,5 +1,5 @@
 name := "scala-start"
-scalaVersion := "2.13.0"
+scalaVersion := "2.13.1"
 version := "1.0"
 
 val akkaVersion     = "2.5.25"

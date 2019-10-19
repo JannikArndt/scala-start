@@ -19,7 +19,7 @@ libraryDependencies ++= Seq(
   "de.heikoseeberger"          %% "akka-http-json4s"     % "1.29.1",
   "org.json4s"                 %% "json4s-native"        % "3.6.7",
   "org.scalatest"              %% "scalatest"            % "3.0.8" % Test,
-  "org.mockito"                %% "mockito-scala"        % "1.5.18" % Test,
+  "org.mockito"                %% "mockito-scala"        % "1.6.2" % Test,
   "com.typesafe.slick"         %% "slick"                % "3.3.2",
   "com.typesafe.slick"         %% "slick-hikaricp"       % "3.3.2",
   "com.typesafe.play"          %% "play-json"            % "2.7.4",

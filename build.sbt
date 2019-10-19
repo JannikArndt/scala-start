@@ -2,7 +2,7 @@ name := "scala-start"
 scalaVersion := "2.13.1"
 version := "1.0"
 
-val akkaVersion     = "2.5.25"
+val akkaVersion     = "2.5.26"
 val akkaHttpVersion = "10.1.10"
 
 libraryDependencies ++= Seq(

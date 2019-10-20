@@ -3,13 +3,13 @@ version: 2
 jobs:
   build:
     docker:
-      - image: moia/scala-on-circleci:LATEST
+      - image: circleci/openjdk:8u222
     steps:
       - checkout
       - run: sbt compile
   test:
     docker:
-      - image: moia/scala-on-circleci:LATEST
+      - image: circleci/openjdk:8u222
     steps:
       - checkout
       - run: sbt test

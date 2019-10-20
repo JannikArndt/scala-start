@@ -1,0 +1,24 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: moia/scala-on-circleci:LATEST
+    steps:
+      - checkout
+      - run: sbt compile
+  test:
+    docker:
+      - image: moia/scala-on-circleci:LATEST
+    steps:
+      - checkout
+      - run: sbt test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build

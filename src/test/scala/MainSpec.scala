@@ -1,4 +1,4 @@
-import akka.actor.{ActorRef, ActorSystem, Props}
+import akka.actor.ActorSystem
 import akka.testkit.TestKit
 import org.scalatest.{BeforeAndAfterAll, FlatSpecLike, Matchers}
 

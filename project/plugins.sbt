@@ -2,7 +2,7 @@
 addSbtPlugin("io.spray"               % "sbt-revolver"   % "0.9.1")
 
 // adds scalafmt
-addSbtPlugin("org.scalameta"           % "sbt-scalafmt"   % "2.2.0")
+addSbtPlugin("org.scalameta"           % "sbt-scalafmt"   % "2.2.1")
 
 // Enable several package formats, especially docker.
 // sbt> docker:publishLocal

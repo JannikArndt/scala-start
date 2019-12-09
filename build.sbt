@@ -31,7 +31,7 @@ lazy val databaseDependencies = Seq(
   "com.typesafe.slick" %% "slick"          % "3.3.2",
   "com.typesafe.slick" %% "slick-hikaricp" % "3.3.2",
   "com.typesafe.play"  %% "play-json"      % "2.8.0",
-  "org.postgresql"     % "postgresql"      % "42.2.8",
+  "org.postgresql"     % "postgresql"      % "42.2.9",
   "com.chuusai"        %% "shapeless"      % "2.3.3",
   "io.underscore"      %% "slickless"      % "0.3.6",
 )

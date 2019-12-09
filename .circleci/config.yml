@@ -10,7 +10,6 @@ jobs:
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "build.sbt" }}
-            # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
       - run: sbt compile
@@ -22,17 +21,29 @@ jobs:
 
   test:
     docker:
-      - image: circleci/openjdk:8u222
+      - image: circleci/openjdk:8-jdk
     steps:
       - checkout
 
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "build.sbt" }}
-            # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
       - run: sbt test
+
+  run:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "build.sbt" }}
+            - v1-dependencies-
+
+      - run: sbt run
 
 workflows:
   version: 2
@@ -40,5 +51,8 @@ workflows:
     jobs:
       - build
       - test:
+          requires:
+            - build
+      - run:
           requires:
             - build

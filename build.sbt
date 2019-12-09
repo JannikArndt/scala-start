@@ -21,7 +21,6 @@ lazy val akkaDependencies = Seq(
   "com.typesafe.akka" %% "akka-cluster-tools"   % akkaVersion,
   "com.typesafe.akka" %% "akka-cluster-metrics" % akkaVersion,
   "com.typesafe.akka" %% "akka-persistence"     % akkaVersion,
-  "com.typesafe.akka" %% "akka-contrib"         % akkaVersion,
   "com.typesafe.akka" %% "akka-http"            % akkaHttpVersion,
   "com.typesafe.akka" %% "akka-testkit"         % akkaVersion % Test,
   "com.typesafe.akka" %% "akka-http-testkit"    % akkaHttpVersion % Test,

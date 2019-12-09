@@ -11,8 +11,8 @@ lazy val root = (project in file("."))
 Global / onChangedBuildSource := ReloadOnSourceChanges
 ThisBuild / turbo := true
 
-val akkaVersion     = "2.6.0"
-val akkaHttpVersion = "10.1.10"
+val akkaVersion     = "2.6.1"
+val akkaHttpVersion = "10.1.11"
 
 lazy val akkaDependencies = Seq(
   "com.typesafe.akka" %% "akka-actor"           % akkaVersion,
@@ -31,7 +31,7 @@ lazy val databaseDependencies = Seq(
   "com.typesafe.slick" %% "slick"          % "3.3.2",
   "com.typesafe.slick" %% "slick-hikaricp" % "3.3.2",
   "com.typesafe.play"  %% "play-json"      % "2.8.0",
-  "org.postgresql"     % "postgresql"      % "42.2.8",
+  "org.postgresql"     % "postgresql"      % "42.2.9",
   "com.chuusai"        %% "shapeless"      % "2.3.3",
   "io.underscore"      %% "slickless"      % "0.3.6",
 )
@@ -39,7 +39,7 @@ lazy val databaseDependencies = Seq(
 lazy val testDependencies = Seq(
   "org.json4s"    %% "json4s-native" % "3.6.7",
   "org.scalatest" %% "scalatest"     % "3.1.0" % Test,
-  "org.mockito"   %% "mockito-scala" % "1.7.1" % Test,
+  "org.mockito"   %% "mockito-scala" % "1.10.0" % Test,
 )
 
 lazy val loggingDependencies = Seq(

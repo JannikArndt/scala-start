@@ -7,7 +7,7 @@ addSbtPlugin("org.scalameta"           % "sbt-scalafmt"   % "2.3.0")
 // Enable several package formats, especially docker.
 // sbt> docker:publishLocal
 // sbt> docker:publish
-addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.5.1")
+addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.5.2")
 
 // adds dependencyCheck
 addSbtPlugin("net.vonbuchholtz" % "sbt-dependency-check" % "1.3.3")

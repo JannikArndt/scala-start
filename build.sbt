@@ -12,7 +12,7 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 ThisBuild / turbo := true
 
 val akkaVersion     = "2.6.5"
-val akkaHttpVersion = "10.1.11"
+val akkaHttpVersion = "10.1.12"
 
 lazy val akkaDependencies = Seq(
   "com.typesafe.akka" %% "akka-actor"           % akkaVersion,
@@ -29,7 +29,7 @@ lazy val akkaDependencies = Seq(
 lazy val databaseDependencies = Seq(
   "com.typesafe.slick" %% "slick"          % "3.3.2",
   "com.typesafe.slick" %% "slick-hikaricp" % "3.3.2",
-  "com.typesafe.play"  %% "play-json"      % "2.8.1",
+  "com.typesafe.play"  %% "play-json"      % "2.9.0",
   "org.postgresql"     % "postgresql"      % "42.2.12",
   "com.chuusai"        %% "shapeless"      % "2.3.3",
   "io.underscore"      %% "slickless"      % "0.3.6",
@@ -37,8 +37,8 @@ lazy val databaseDependencies = Seq(
 
 lazy val testDependencies = Seq(
   "org.json4s"    %% "json4s-native" % "3.6.8",
-  "org.scalatest" %% "scalatest"     % "3.1.2" % Test,
-  "org.mockito"   %% "mockito-scala" % "1.14.0" % Test,
+  "org.scalatest" %% "scalatest"     % "3.1.1" % Test,
+  "org.mockito"   %% "mockito-scala" % "1.14.4" % Test,
 )
 
 lazy val loggingDependencies = Seq(

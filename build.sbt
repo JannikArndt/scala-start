@@ -38,7 +38,7 @@ lazy val databaseDependencies = Seq(
 lazy val testDependencies = Seq(
   "org.json4s"    %% "json4s-native" % "3.6.8",
   "org.scalatest" %% "scalatest"     % "3.2.1" % Test,
-  "org.mockito"   %% "mockito-scala" % "1.14.8" % Test,
+  "org.mockito"   %% "mockito-scala" % "1.15.0" % Test,
 )
 
 lazy val loggingDependencies = Seq(

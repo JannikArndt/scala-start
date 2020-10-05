@@ -27,8 +27,8 @@ lazy val akkaDependencies = Seq(
   "de.heikoseeberger" %% "akka-http-json4s"     % "1.35.0",
 )
 lazy val databaseDependencies = Seq(
-  "com.typesafe.slick" %% "slick"          % "3.3.2",
-  "com.typesafe.slick" %% "slick-hikaricp" % "3.3.2",
+  "com.typesafe.slick" %% "slick"          % "3.3.3",
+  "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3",
   "com.typesafe.play"  %% "play-json"      % "2.9.1",
   "org.postgresql"     % "postgresql"      % "42.2.14",
   "com.chuusai"        %% "shapeless"      % "2.3.3",

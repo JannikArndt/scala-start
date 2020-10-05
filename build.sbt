@@ -11,8 +11,8 @@ lazy val root = (project in file("."))
 Global / onChangedBuildSource := ReloadOnSourceChanges
 ThisBuild / turbo := true
 
-val akkaVersion     = "2.6.9"
-val akkaHttpVersion = "10.2.0"
+val akkaVersion     = "2.6.8"
+val akkaHttpVersion = "10.2.1"
 
 lazy val akkaDependencies = Seq(
   "com.typesafe.akka" %% "akka-actor"           % akkaVersion,
@@ -24,21 +24,21 @@ lazy val akkaDependencies = Seq(
   "com.typesafe.akka" %% "akka-http"            % akkaHttpVersion,
   "com.typesafe.akka" %% "akka-testkit"         % akkaVersion % Test,
   "com.typesafe.akka" %% "akka-http-testkit"    % akkaHttpVersion % Test,
-  "de.heikoseeberger" %% "akka-http-json4s"     % "1.33.0",
+  "de.heikoseeberger" %% "akka-http-json4s"     % "1.35.0",
 )
 lazy val databaseDependencies = Seq(
   "com.typesafe.slick" %% "slick"          % "3.3.2",
   "com.typesafe.slick" %% "slick-hikaricp" % "3.3.2",
-  "com.typesafe.play"  %% "play-json"      % "2.9.0",
+  "com.typesafe.play"  %% "play-json"      % "2.9.1",
   "org.postgresql"     % "postgresql"      % "42.2.14",
   "com.chuusai"        %% "shapeless"      % "2.3.3",
   "io.underscore"      %% "slickless"      % "0.3.6",
 )
 
 lazy val testDependencies = Seq(
-  "org.json4s"    %% "json4s-native" % "3.6.8",
+  "org.json4s"    %% "json4s-native" % "3.6.10",
   "org.scalatest" %% "scalatest"     % "3.2.1" % Test,
-  "org.mockito"   %% "mockito-scala" % "1.14.8" % Test,
+  "org.mockito"   %% "mockito-scala" % "1.16.0" % Test,
 )
 
 lazy val loggingDependencies = Seq(

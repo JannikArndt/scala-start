@@ -10,4 +10,4 @@ addSbtPlugin("org.scalameta"           % "sbt-scalafmt"   % "2.4.2")
 addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.7.4")
 
 // adds dependencyCheck
-addSbtPlugin("net.vonbuchholtz" % "sbt-dependency-check" % "2.0.0")
+addSbtPlugin("net.vonbuchholtz" % "sbt-dependency-check" % "2.1.0")

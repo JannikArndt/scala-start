@@ -3,7 +3,7 @@ lazy val root = (project in file("."))
     name := "scala-start",
     organization := "my-organization",
     version := "1.0.0",
-    scalaVersion := "2.13.1",
+    scalaVersion := "2.13.4",
     scalacOptions := scalaCompilerOptions,
     libraryDependencies ++= akkaDependencies ++ databaseDependencies ++ testDependencies ++ loggingDependencies ++ otherDependencies,
   ).enablePlugins(JavaAppPackaging, DockerPlugin)
@@ -11,8 +11,8 @@ lazy val root = (project in file("."))
 Global / onChangedBuildSource := ReloadOnSourceChanges
 ThisBuild / turbo := true
 
-val akkaVersion     = "2.6.10"
-val akkaHttpVersion = "10.2.1"
+val akkaVersion     = "2.6.11"
+val akkaHttpVersion = "10.2.2"
 
 lazy val akkaDependencies = Seq(
   "com.typesafe.akka" %% "akka-actor"           % akkaVersion,
@@ -24,21 +24,21 @@ lazy val akkaDependencies = Seq(
   "com.typesafe.akka" %% "akka-http"            % akkaHttpVersion,
   "com.typesafe.akka" %% "akka-testkit"         % akkaVersion % Test,
   "com.typesafe.akka" %% "akka-http-testkit"    % akkaHttpVersion % Test,
-  "de.heikoseeberger" %% "akka-http-json4s"     % "1.35.0",
+  "de.heikoseeberger" %% "akka-http-json4s"     % "1.35.3",
 )
 lazy val databaseDependencies = Seq(
-  "com.typesafe.slick" %% "slick"          % "3.3.2",
-  "com.typesafe.slick" %% "slick-hikaricp" % "3.3.2",
-  "com.typesafe.play"  %% "play-json"      % "2.9.1",
-  "org.postgresql"     % "postgresql"      % "42.2.14",
+  "com.typesafe.slick" %% "slick"          % "3.3.3",
+  "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3",
+  "com.typesafe.play"  %% "play-json"      % "2.9.2",
+  "org.postgresql"     % "postgresql"      % "42.2.18",
   "com.chuusai"        %% "shapeless"      % "2.3.3",
   "io.underscore"      %% "slickless"      % "0.3.6",
 )
 
 lazy val testDependencies = Seq(
   "org.json4s"    %% "json4s-native" % "3.6.10",
-  "org.scalatest" %% "scalatest"     % "3.2.1" % Test,
-  "org.mockito"   %% "mockito-scala" % "1.16.0" % Test,
+  "org.scalatest" %% "scalatest"     % "3.2.3" % Test,
+  "org.mockito"   %% "mockito-scala" % "1.16.15" % Test,
 )
 
 lazy val loggingDependencies = Seq(
@@ -52,7 +52,7 @@ lazy val otherDependencies = Seq(
 )
 
 lazy val scalaCompilerOptions = Seq(
-  "-target:8",
+  "-target:11",
   "-deprecation",                      // Emit warning and location for usages of deprecated APIs.
   "-encoding", "utf-8",                // Specify character encoding used by source files.
   "-explaintypes",                     // Explain type errors in more detail.
@@ -71,7 +71,6 @@ lazy val scalaCompilerOptions = Seq(
   "-Xlint:inaccessible",               // Warn about inaccessible types in method signatures.
   "-Xlint:infer-any",                  // Warn when a type argument is inferred to be `Any`.
   "-Xlint:missing-interpolator",       // A string literal appears to be missing an interpolator id.
-  "-Xlint:nullary-override",           // Warn when non-nullary `def f()' overrides nullary `def f'.
   "-Xlint:nullary-unit",               // Warn when nullary methods return Unit.
   "-Xlint:option-implicit",            // Option.apply used implicit view.
   "-Xlint:package-object-classes",     // Class or object defined in package object.

@@ -11,7 +11,7 @@ lazy val root = (project in file("."))
 Global / onChangedBuildSource := ReloadOnSourceChanges
 ThisBuild / turbo := true
 
-val akkaVersion     = "2.6.11"
+val akkaVersion     = "2.6.12"
 val akkaHttpVersion = "10.2.2"
 
 lazy val akkaDependencies = Seq(

@@ -12,7 +12,7 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 ThisBuild / turbo := true
 
 val akkaVersion     = "2.6.11"
-val akkaHttpVersion = "10.2.2"
+val akkaHttpVersion = "10.2.4"
 
 lazy val akkaDependencies = Seq(
   "com.typesafe.akka" %% "akka-actor"           % akkaVersion,

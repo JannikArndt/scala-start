@@ -1,8 +1,8 @@
 // adds reStart and reStop
-addSbtPlugin("io.spray"               % "sbt-revolver"   % "0.9.1")
+addSbtPlugin("io.spray" % "sbt-revolver" % "0.9.1")
 
 // adds scalafmt
-addSbtPlugin("org.scalameta"           % "sbt-scalafmt"   % "2.4.2")
+addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.4.2")
 
 // Enable several package formats, especially docker.
 // sbt> docker:publishLocal

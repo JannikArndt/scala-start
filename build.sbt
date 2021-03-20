@@ -3,7 +3,7 @@ lazy val root = (project in file("."))
     name := "scala-start",
     organization := "my-organization",
     version := "1.0.0",
-    scalaVersion := "2.13.4",
+    scalaVersion := "2.13.5",
     scalacOptions := scalaCompilerOptions,
     libraryDependencies ++= akkaDependencies ++ databaseDependencies ++ testDependencies ++ loggingDependencies ++ otherDependencies,
   ).enablePlugins(JavaAppPackaging, DockerPlugin)
@@ -11,7 +11,7 @@ lazy val root = (project in file("."))
 Global / onChangedBuildSource := ReloadOnSourceChanges
 ThisBuild / turbo := true
 
-val akkaVersion     = "2.6.11"
+val akkaVersion     = "2.6.13"
 val akkaHttpVersion = "10.2.2"
 
 lazy val akkaDependencies = Seq(
@@ -30,14 +30,14 @@ lazy val databaseDependencies = Seq(
   "com.typesafe.slick" %% "slick"          % "3.3.3",
   "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3",
   "com.typesafe.play"  %% "play-json"      % "2.9.2",
-  "org.postgresql"     % "postgresql"      % "42.2.18",
+  "org.postgresql"     % "postgresql"      % "42.2.19",
   "com.chuusai"        %% "shapeless"      % "2.3.3",
   "io.underscore"      %% "slickless"      % "0.3.6",
 )
 
 lazy val testDependencies = Seq(
   "org.json4s"    %% "json4s-native" % "3.6.10",
-  "org.scalatest" %% "scalatest"     % "3.2.3" % Test,
+  "org.scalatest" %% "scalatest"     % "3.2.6" % Test,
   "org.mockito"   %% "mockito-scala" % "1.16.32" % Test,
 )
 

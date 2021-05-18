@@ -1,3 +1,2 @@
-object Main extends App {
-  println("Hello.")
-}
+object Main extends App:
+  print("Hello")

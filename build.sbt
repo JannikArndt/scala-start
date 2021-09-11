@@ -1,16 +1,16 @@
 lazy val root = (project in file("."))
   .settings(
-    name := "scala-start",
-    organization := "my-organization",
-    version := "1.0.0",
-    scalaVersion := "2.13.5",
+    name          := "scala-start",
+    organization  := "my-organization",
+    version       := "1.0.0",
+    scalaVersion  := "2.13.5",
     scalacOptions := scalaCompilerOptions,
     libraryDependencies ++= akkaDependencies ++ databaseDependencies ++ testDependencies ++ loggingDependencies ++ otherDependencies
   )
   .enablePlugins(JavaAppPackaging, DockerPlugin)
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
-ThisBuild / turbo := true
+ThisBuild / turbo             := true
 
 val akkaVersion     = "2.6.15"
 val akkaHttpVersion = "10.2.6"

@@ -3,7 +3,7 @@ lazy val root = (project in file("."))
     name := "scala-start",
     organization := "my-organization",
     version := "1.0.0",
-    scalaVersion := "2.13.5",
+    scalaVersion := "2.13.6",
     scalacOptions := scalaCompilerOptions,
     libraryDependencies ++= akkaDependencies ++ databaseDependencies ++ testDependencies ++ loggingDependencies ++ otherDependencies
   )
@@ -13,7 +13,7 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 ThisBuild / turbo := true
 
 val akkaVersion     = "2.6.15"
-val akkaHttpVersion = "10.2.4"
+val akkaHttpVersion = "10.2.6"
 
 lazy val akkaDependencies = Seq(
   "com.typesafe.akka" %% "akka-actor"           % akkaVersion,
@@ -37,14 +37,14 @@ lazy val databaseDependencies = Seq(
 )
 
 lazy val testDependencies = Seq(
-  "org.json4s"    %% "json4s-native" % "4.0.3",
-  "org.scalatest" %% "scalatest"     % "3.2.9"   % Test,
-  "org.mockito"   %% "mockito-scala" % "1.16.37" % Test
+  "org.json4s"    %% "json4s-native" % "3.6.11",
+  "org.scalatest" %% "scalatest"     % "3.2.10"   % Test,
+  "org.mockito"   %% "mockito-scala" % "1.16.42" % Test
 )
 
 lazy val loggingDependencies = Seq(
   "com.typesafe.scala-logging" %% "scala-logging"   % "3.9.4",
-  "ch.qos.logback"              % "logback-classic" % "1.2.4",
+  "ch.qos.logback"              % "logback-classic" % "1.2.6",
   "org.slf4j"                   % "slf4j-simple"    % "1.7.32"
 )
 

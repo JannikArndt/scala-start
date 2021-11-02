@@ -3,7 +3,7 @@ lazy val root = (project in file("."))
     name := "scala-start",
     organization := "my-organization",
     version := "1.0.0",
-    scalaVersion := "2.13.6",
+    scalaVersion := "2.13.7",
     scalacOptions := scalaCompilerOptions,
     libraryDependencies ++= akkaDependencies ++ databaseDependencies ++ testDependencies ++ loggingDependencies ++ otherDependencies
   )

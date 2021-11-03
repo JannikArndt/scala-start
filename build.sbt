@@ -1,9 +1,9 @@
 lazy val root = (project in file("."))
   .settings(
-    name          := "scala-start",
-    organization  := "my-organization",
-    version       := "1.0.0",
-    scalaVersion  := "2.13.6",
+    name := "scala-start",
+    organization := "my-organization",
+    version := "1.0.0",
+    scalaVersion := "2.13.7",
     scalacOptions := scalaCompilerOptions,
     libraryDependencies ++= akkaDependencies ++ databaseDependencies ++ testDependencies ++ loggingDependencies ++ otherDependencies
   )
@@ -31,7 +31,7 @@ lazy val databaseDependencies = Seq(
   "com.typesafe.slick" %% "slick"          % "3.3.3",
   "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3",
   "com.typesafe.play"  %% "play-json"      % "2.9.2",
-  "org.postgresql"      % "postgresql"     % "42.3.0",
+  "org.postgresql"      % "postgresql"     % "42.3.1",
   "com.chuusai"        %% "shapeless"      % "2.3.7",
   "io.underscore"      %% "slickless"      % "0.3.6"
 )

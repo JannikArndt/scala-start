@@ -10,7 +10,7 @@ lazy val root = (project in file("."))
   .enablePlugins(JavaAppPackaging, DockerPlugin)
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
-ThisBuild / turbo := true
+ThisBuild / turbo             := true
 
 val akkaVersion     = "2.6.17"
 val akkaHttpVersion = "10.2.7"

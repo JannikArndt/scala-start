@@ -12,7 +12,7 @@ lazy val root = (project in file("."))
 Global / onChangedBuildSource := ReloadOnSourceChanges
 ThisBuild / turbo := true
 
-val akkaVersion     = "2.6.15"
+val akkaVersion     = "2.6.17"
 val akkaHttpVersion = "10.2.7"
 
 lazy val akkaDependencies = Seq(
@@ -37,7 +37,7 @@ lazy val databaseDependencies = Seq(
 )
 
 lazy val testDependencies = Seq(
-  "org.json4s"    %% "json4s-native" % "3.6.12",
+  "org.json4s"    %% "json4s-native" % "4.0.2",
   "org.scalatest" %% "scalatest"     % "3.2.10"   % Test,
   "org.mockito"   %% "mockito-scala" % "1.16.46" % Test
 )
@@ -49,7 +49,7 @@ lazy val loggingDependencies = Seq(
 )
 
 lazy val otherDependencies = Seq(
-  "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1"
+  "org.scala-lang.modules" %% "scala-java8-compat" % "1.0.1"
 )
 
 lazy val scalaCompilerOptions = Seq(

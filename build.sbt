@@ -13,7 +13,7 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 ThisBuild / turbo             := true
 
 val akkaVersion     = "2.6.15"
-val akkaHttpVersion = "10.2.6"
+val akkaHttpVersion = "10.2.7"
 
 lazy val akkaDependencies = Seq(
   "com.typesafe.akka" %% "akka-actor"           % akkaVersion,
@@ -37,8 +37,8 @@ lazy val databaseDependencies = Seq(
 )
 
 lazy val testDependencies = Seq(
-  "org.json4s"    %% "json4s-native" % "3.6.11",
-  "org.scalatest" %% "scalatest"     % "3.2.10"  % Test,
+  "org.json4s"    %% "json4s-native" % "3.6.12",
+  "org.scalatest" %% "scalatest"     % "3.2.10"   % Test,
   "org.mockito"   %% "mockito-scala" % "1.16.46" % Test
 )
 

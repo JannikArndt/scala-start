@@ -1,9 +1,9 @@
 lazy val root = (project in file("."))
   .settings(
-    name := "scala-start",
-    organization := "my-organization",
-    version := "1.0.0",
-    scalaVersion := "2.13.7",
+    name          := "scala-start",
+    organization  := "my-organization",
+    version       := "1.0.0",
+    scalaVersion  := "2.13.7",
     scalacOptions := scalaCompilerOptions,
     libraryDependencies ++= akkaDependencies ++ databaseDependencies ++ testDependencies ++ loggingDependencies ++ otherDependencies
   )
@@ -38,13 +38,13 @@ lazy val databaseDependencies = Seq(
 
 lazy val testDependencies = Seq(
   "org.json4s"    %% "json4s-native" % "4.0.2",
-  "org.scalatest" %% "scalatest"     % "3.2.10"   % Test,
+  "org.scalatest" %% "scalatest"     % "3.2.10"  % Test,
   "org.mockito"   %% "mockito-scala" % "1.16.46" % Test
 )
 
 lazy val loggingDependencies = Seq(
   "com.typesafe.scala-logging" %% "scala-logging"   % "3.9.4",
-  "ch.qos.logback"              % "logback-classic" % "1.2.6",
+  "ch.qos.logback"              % "logback-classic" % "1.2.7",
   "org.slf4j"                   % "slf4j-simple"    % "1.7.32"
 )
 

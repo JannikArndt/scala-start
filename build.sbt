@@ -37,7 +37,7 @@ lazy val databaseDependencies = Seq(
 )
 
 lazy val testDependencies = Seq(
-  "org.json4s"    %% "json4s-native" % "4.0.2",
+  "org.json4s"    %% "json4s-native" % "4.0.3",
   "org.scalatest" %% "scalatest"     % "3.2.10"  % Test,
   "org.mockito"   %% "mockito-scala" % "1.16.49" % Test
 )
@@ -49,23 +49,19 @@ lazy val loggingDependencies = Seq(
 )
 
 lazy val otherDependencies = Seq(
-  "org.scala-lang.modules" %% "scala-java8-compat" % "1.0.1"
+  "org.scala-lang.modules" %% "scala-java8-compat" % "1.0.2"
 )
 
 lazy val scalaCompilerOptions = Seq(
   "-target:11",
   "-deprecation", // Emit warning and location for usages of deprecated APIs.
   "-encoding",
-  "utf-8",                         // Specify character encoding used by source files.
-  "-explaintypes",                 // Explain type errors in more detail.
-  "-feature",                      // Emit warning and location for usages of features that should be imported explicitly.
-  "-language:existentials",        // Existential types (besides wildcard types) can be written and inferred
-  "-language:experimental.macros", // Allow macro definition (besides implementation and application)
-  "-language:higherKinds",         // Allow higher-kinded types
-  "-language:implicitConversions", // Allow definition of implicit functions called views
-  "-unchecked",                    // Enable additional warnings where generated code depends on assumptions.
-  "-Xcheckinit",                   // Wrap field accessors to throw an exception on uninitialized access.
-  "-Xfatal-warnings",              // Fail the compilation if there are any warnings.
+  "utf-8",         // Specify character encoding used by source files.
+  "-explaintypes", // Explain type errors in more detail.
+  "-feature",      // Emit warning and location for usages of features that should be imported explicitly.
+  "-unchecked",    // Enable additional warnings where generated code depends on assumptions.
+  "-Xcheckinit",   // Wrap field accessors to throw an exception on uninitialized access.
+//  "-Xfatal-warnings",              // Fail the compilation if there are any warnings.
   "-Xlint:adapted-args",           // Warn if an argument list is modified to match the receiver.
   "-Xlint:constant",               // Evaluation of a constant arithmetic expression results in an error.
   "-Xlint:delayedinit-select",     // Selecting member of DelayedInit.
@@ -89,5 +85,6 @@ lazy val scalaCompilerOptions = Seq(
   "-Ywarn-unused:params",          // Warn if a value parameter is unused.
   "-Ywarn-unused:patvars",         // Warn if a variable bound in a pattern is unused.
   "-Ywarn-unused:privates",        // Warn if a private member is unused.
-  "-Ywarn-value-discard"           // Warn when non-Unit expression results are unused.
+  "-Ywarn-value-discard",          // Warn when non-Unit expression results are unused.
+  "-Xsource:3"                     // use Scala 3 syntax
 )

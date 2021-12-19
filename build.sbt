@@ -5,47 +5,53 @@ lazy val root = (project in file("."))
     version       := "1.0.0",
     scalaVersion  := "2.13.7",
     scalacOptions := scalaCompilerOptions,
-    libraryDependencies ++= akkaDependencies ++ databaseDependencies ++ testDependencies ++ loggingDependencies ++ otherDependencies
+    libraryDependencies ++= akkaDependencies ++ databaseDependencies ++ jsonDependencies ++ testDependencies ++ loggingDependencies ++ otherDependencies
   )
   .enablePlugins(JavaAppPackaging, DockerPlugin)
-
-Global / onChangedBuildSource := ReloadOnSourceChanges
-ThisBuild / turbo             := true
 
 val akkaVersion     = "2.6.17"
 val akkaHttpVersion = "10.2.7"
 
 lazy val akkaDependencies = Seq(
-  "com.typesafe.akka" %% "akka-actor"           % akkaVersion,
-  "com.typesafe.akka" %% "akka-stream"          % akkaVersion,
-  "com.typesafe.akka" %% "akka-cluster"         % akkaVersion,
-  "com.typesafe.akka" %% "akka-cluster-tools"   % akkaVersion,
-  "com.typesafe.akka" %% "akka-cluster-metrics" % akkaVersion,
-  "com.typesafe.akka" %% "akka-persistence"     % akkaVersion,
-  "com.typesafe.akka" %% "akka-http"            % akkaHttpVersion,
-  "com.typesafe.akka" %% "akka-testkit"         % akkaVersion     % Test,
-  "com.typesafe.akka" %% "akka-http-testkit"    % akkaHttpVersion % Test,
-  "de.heikoseeberger" %% "akka-http-json4s"     % "1.38.2"
+  "com.typesafe.akka" %% "akka-actor-typed"         % akkaVersion,
+  "com.typesafe.akka" %% "akka-stream"              % akkaVersion,
+  "com.typesafe.akka" %% "akka-http"                % akkaHttpVersion,
+  "com.typesafe.akka" %% "akka-actor-testkit-typed" % akkaVersion     % Test,
+  "com.typesafe.akka" %% "akka-http-testkit"        % akkaHttpVersion % Test,
+  "ch.megard"         %% "akka-http-cors"           % "1.1.2"
 )
 lazy val databaseDependencies = Seq(
-  "com.typesafe.slick" %% "slick"          % "3.3.3",
-  "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3",
-  "com.typesafe.play"  %% "play-json"      % "2.9.2",
-  "org.postgresql"      % "postgresql"     % "42.3.1",
-  "com.chuusai"        %% "shapeless"      % "2.3.7",
-  "io.underscore"      %% "slickless"      % "0.3.6"
+  "org.postgresql"       % "postgresql"          % "42.3.1",
+  "com.h2database"       % "h2"                  % "2.0.202",
+  "com.typesafe.slick"  %% "slick"               % "3.3.3",
+  "com.typesafe.slick"  %% "slick-hikaricp"      % "3.3.3",
+  "com.github.tminglei" %% "slick-pg"            % "0.19.7",
+  "com.github.tminglei" %% "slick-pg_circe-json" % "0.19.7"
+)
+
+val circeVersion = "0.14.1"
+
+lazy val jsonDependencies = Seq(
+  "io.circe"          %% "circe-core"      % circeVersion,
+  "io.circe"          %% "circe-generic"   % circeVersion,
+  "io.circe"          %% "circe-parser"    % circeVersion,
+  "de.heikoseeberger" %% "akka-http-circe" % "1.38.2"
 )
 
 lazy val testDependencies = Seq(
-  "org.json4s"    %% "json4s-native" % "4.0.3",
   "org.scalatest" %% "scalatest"     % "3.2.10"  % Test,
   "org.mockito"   %% "mockito-scala" % "1.16.49" % Test
 )
 
+lazy val log4JVersion = "2.17.0"
+
 lazy val loggingDependencies = Seq(
-  "com.typesafe.scala-logging" %% "scala-logging"   % "3.9.4",
-  "ch.qos.logback"              % "logback-classic" % "1.2.9",
-  "org.slf4j"                   % "slf4j-simple"    % "1.7.32"
+  // scala-logging wraps SLF4J, which can use log4j2
+  "com.typesafe.scala-logging" %% "scala-logging"    % "3.9.4",
+  "org.apache.logging.log4j"    % "log4j-api"        % log4JVersion,
+  "org.apache.logging.log4j"    % "log4j-core"       % log4JVersion,
+  "org.apache.logging.log4j"    % "log4j-slf4j-impl" % log4JVersion % "runtime",
+  "com.lmax"                    % "disruptor"        % "3.4.4"      % "runtime"
 )
 
 lazy val otherDependencies = Seq(

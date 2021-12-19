@@ -1,11 +1,14 @@
 # Quick Start for a Server with Database in Scala
 
-uses
+uses / includes
 
 * [akka-http](https://github.com/akka/akka-http) as server-framework
 * [slick](https://github.com/slick/slick/) to access the database
 * [circe](https://github.com/circe/circe) to serialize to JSON and back
 * PostgreSQL as Database
+* GitHub Actions and CircleCI definition for CI/CD
+* [Scalafmt](https://scalameta.org/scalafmt/) for formatting
+* a lot of sane, tried-and-tested defaults
 
 ## Example usage
 

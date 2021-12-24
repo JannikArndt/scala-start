@@ -35,7 +35,7 @@ lazy val jsonDependencies = Seq(
   "io.circe"          %% "circe-core"      % circeVersion,
   "io.circe"          %% "circe-generic"   % circeVersion,
   "io.circe"          %% "circe-parser"    % circeVersion,
-  "de.heikoseeberger" %% "akka-http-circe" % "1.38.2"
+  "de.heikoseeberger" %% "akka-http-circe" % "1.39.2"
 )
 
 lazy val testDependencies = Seq(

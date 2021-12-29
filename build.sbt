@@ -5,7 +5,7 @@ lazy val root = (project in file("."))
     version       := "1.0.0",
     scalaVersion  := "2.13.7",
     scalacOptions := scalaCompilerOptions,
-    libraryDependencies ++= akkaDependencies ++ databaseDependencies ++ jsonDependencies ++ testDependencies ++ loggingDependencies ++ otherDependencies
+    libraryDependencies ++= akkaDependencies ++ databaseDependencies ++ jsonDependencies ++ testDependencies ++ loggingDependencies
   )
   .enablePlugins(JavaAppPackaging, DockerPlugin)
 
@@ -52,10 +52,6 @@ lazy val loggingDependencies = Seq(
   "org.apache.logging.log4j"    % "log4j-core"       % log4JVersion,
   "org.apache.logging.log4j"    % "log4j-slf4j-impl" % log4JVersion % "runtime",
   "com.lmax"                    % "disruptor"        % "3.4.4"      % "runtime"
-)
-
-lazy val otherDependencies = Seq(
-  "org.scala-lang.modules" %% "scala-java8-compat" % "1.0.2"
 )
 
 lazy val scalaCompilerOptions = Seq(

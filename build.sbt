@@ -22,7 +22,7 @@ lazy val akkaDependencies = Seq(
 )
 lazy val databaseDependencies = Seq(
   "org.postgresql"       % "postgresql"          % "42.3.1",
-  "com.h2database"       % "h2"                  % "2.0.204",
+  "com.h2database"       % "h2"                  % "2.0.206",
   "com.typesafe.slick"  %% "slick"               % "3.3.3",
   "com.typesafe.slick"  %% "slick-hikaricp"      % "3.3.3",
   "com.github.tminglei" %% "slick-pg"            % "0.20.2",

@@ -35,7 +35,7 @@ object Main extends StrictLogging {
 //      context.watch(userRegistryActor)
 
 //      Initialize database
-      val database = new PostgresDatabase()
+      val database = new PostgresDatabase
       database.init
       val logic = new Logic(database)(context.executionContext)
 

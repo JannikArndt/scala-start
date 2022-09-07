@@ -10,7 +10,7 @@ lazy val root = (project in file("."))
   .enablePlugins(JavaAppPackaging, DockerPlugin)
 
 val akkaVersion     = "2.6.19"
-val akkaHttpVersion = "10.2.9"
+val akkaHttpVersion = "10.2.10"
 
 lazy val akkaDependencies = Seq(
   "com.typesafe.akka" %% "akka-actor-typed"         % akkaVersion,

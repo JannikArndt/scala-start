@@ -39,7 +39,7 @@ lazy val jsonDependencies = Seq(
 )
 
 lazy val testDependencies = Seq(
-  "org.scalatest" %% "scalatest"     % "3.2.13"  % Test,
+  "org.scalatest" %% "scalatest"     % "3.2.14"  % Test,
   "org.mockito"   %% "mockito-scala" % "1.17.12" % Test
 )
 

@@ -18,7 +18,7 @@ lazy val akkaDependencies = Seq(
   "com.typesafe.akka" %% "akka-http"                % akkaHttpVersion,
   "com.typesafe.akka" %% "akka-actor-testkit-typed" % akkaVersion     % Test,
   "com.typesafe.akka" %% "akka-http-testkit"        % akkaHttpVersion % Test,
-  "ch.megard"         %% "akka-http-cors"           % "1.1.3"
+  "ch.megard"         %% "akka-http-cors"           % "1.2.0"
 )
 lazy val databaseDependencies = Seq(
   "org.postgresql"       % "postgresql"          % "42.5.4",

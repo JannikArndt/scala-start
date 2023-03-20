@@ -55,7 +55,7 @@ lazy val loggingDependencies = Seq(
 )
 
 lazy val scalaCompilerOptions = Seq(
-  "-target:11",
+  "-release:9",
   "-deprecation", // Emit warning and location for usages of deprecated APIs.
   "-encoding",
   "utf-8",         // Specify character encoding used by source files.

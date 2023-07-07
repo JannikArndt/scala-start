@@ -3,7 +3,7 @@ lazy val root = (project in file("."))
     name          := "scala-start",
     organization  := "my-organization",
     version       := "1.0.0",
-    scalaVersion  := "2.13.8",
+    scalaVersion  := "2.13.11",
     scalacOptions := scalaCompilerOptions,
     libraryDependencies ++= akkaDependencies ++ databaseDependencies ++ jsonDependencies ++ testDependencies ++ loggingDependencies
   )
@@ -18,11 +18,11 @@ lazy val akkaDependencies = Seq(
   "com.typesafe.akka" %% "akka-http"                % akkaHttpVersion,
   "com.typesafe.akka" %% "akka-actor-testkit-typed" % akkaVersion     % Test,
   "com.typesafe.akka" %% "akka-http-testkit"        % akkaHttpVersion % Test,
-  "ch.megard"         %% "akka-http-cors"           % "1.1.3"
+  "ch.megard"         %% "akka-http-cors"           % "1.2.0"
 )
 lazy val databaseDependencies = Seq(
-  "org.postgresql"       % "postgresql"          % "42.5.0",
-  "com.h2database"       % "h2"                  % "2.1.214",
+  "org.postgresql"       % "postgresql"          % "42.6.0",
+  "com.h2database"       % "h2"                  % "2.2.220",
   "com.typesafe.slick"  %% "slick"               % "3.3.3",
   "com.typesafe.slick"  %% "slick-hikaricp"      % "3.3.3",
   "com.github.tminglei" %% "slick-pg"            % "0.20.4",
@@ -39,11 +39,11 @@ lazy val jsonDependencies = Seq(
 )
 
 lazy val testDependencies = Seq(
-  "org.scalatest" %% "scalatest"     % "3.2.13"  % Test,
-  "org.mockito"   %% "mockito-scala" % "1.17.12" % Test
+  "org.scalatest" %% "scalatest"     % "3.2.16"  % Test,
+  "org.mockito"   %% "mockito-scala" % "1.17.14" % Test
 )
 
-lazy val log4JVersion = "2.18.0"
+lazy val log4JVersion = "2.20.0"
 
 lazy val loggingDependencies = Seq(
   // scala-logging wraps SLF4J, which can use log4j2
@@ -55,7 +55,7 @@ lazy val loggingDependencies = Seq(
 )
 
 lazy val scalaCompilerOptions = Seq(
-  "-target:11",
+  "-release:9",
   "-deprecation", // Emit warning and location for usages of deprecated APIs.
   "-encoding",
   "utf-8",         // Specify character encoding used by source files.

@@ -51,7 +51,7 @@ lazy val loggingDependencies = Seq(
   "org.apache.logging.log4j"    % "log4j-api"        % log4JVersion,
   "org.apache.logging.log4j"    % "log4j-core"       % log4JVersion,
   "org.apache.logging.log4j"    % "log4j-slf4j-impl" % log4JVersion % "runtime",
-  "com.lmax"                    % "disruptor"        % "3.4.4"      % "runtime"
+  "com.lmax"                    % "disruptor"        % "4.0.0"      % "runtime"
 )
 
 lazy val scalaCompilerOptions = Seq(

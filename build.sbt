@@ -43,7 +43,7 @@ lazy val testDependencies = Seq(
   "org.mockito"   %% "mockito-scala" % "1.17.30" % Test
 )
 
-lazy val log4JVersion = "2.22.1"
+lazy val log4JVersion = "2.23.0"
 
 lazy val loggingDependencies = Seq(
   // scala-logging wraps SLF4J, which can use log4j2

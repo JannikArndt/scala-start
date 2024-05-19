@@ -25,8 +25,8 @@ lazy val databaseDependencies = Seq(
   "com.h2database"       % "h2"                  % "2.2.224",
   "com.typesafe.slick"  %% "slick"               % "3.3.3",
   "com.typesafe.slick"  %% "slick-hikaricp"      % "3.3.3",
-  "com.github.tminglei" %% "slick-pg"            % "0.20.4",
-  "com.github.tminglei" %% "slick-pg_circe-json" % "0.20.4"
+  "com.github.tminglei" %% "slick-pg"            % "0.22.2",
+  "com.github.tminglei" %% "slick-pg_circe-json" % "0.22.2"
 )
 
 val circeVersion = "0.14.2"

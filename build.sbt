@@ -21,7 +21,7 @@ lazy val akkaDependencies = Seq(
   "ch.megard"         %% "akka-http-cors"           % "1.2.0"
 )
 lazy val databaseDependencies = Seq(
-  "org.postgresql"       % "postgresql"          % "42.7.3",
+  "org.postgresql"       % "postgresql"          % "42.7.4",
   "com.h2database"       % "h2"                  % "2.3.232",
   "com.typesafe.slick"  %% "slick"               % "3.3.3",
   "com.typesafe.slick"  %% "slick-hikaricp"      % "3.3.3",

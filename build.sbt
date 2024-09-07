@@ -29,7 +29,7 @@ lazy val databaseDependencies = Seq(
   "com.github.tminglei" %% "slick-pg_circe-json" % "0.20.4"
 )
 
-val circeVersion = "0.14.2"
+val circeVersion = "0.14.10"
 
 lazy val jsonDependencies = Seq(
   "io.circe"          %% "circe-core"      % circeVersion,
